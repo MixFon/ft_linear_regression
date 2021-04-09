@@ -4,7 +4,8 @@
 //
 //  Created by Михаил Фокин on 07.04.2021.
 //
-
+// /Users/mixfon/MyFiles/Swift/ft_linear_regression/UILinearRegression/UILinearRegression/data.csv
+// /Users/mixfon/Library/Developer/Xcode/DerivedData/UILinearRegression-amfgpooblvpofbbucykhqtstrtel/Build/Products/Debug/UILinearRegression.app/Contents/Resources/data.csv
 import Foundation
 
 struct Exception: Error {
@@ -14,6 +15,7 @@ struct Exception: Error {
 class LinearRegression {
     
     var dict = [Double: Double]()
+    var dictNormalize = [Double: Double]()
     var maxMiliage: Double?
     var minMiliage: Double?
     var maxPrice: Double?
@@ -21,27 +23,15 @@ class LinearRegression {
     var k = Double(0)
     var b = Double(0)
     
-    func run() {
-        let arguments = CommandLine.arguments
-        let errorMassage = "Pass the name of the training file as a parameter.\n./ft_linear_regression file_name"
-        if arguments.count != 2 {
-            systemError(massage: errorMassage)
-        }
-        guard let fileName = arguments.last else {
-            systemError(massage: "Error file name.")
-            return
-        }
-        if fileName.isEmpty {
-            systemError(massage: errorMassage)
-        }
+    init(filePath: String) {
         do {
-            let text = try readFile(fileName: fileName)
+            let text = try readFile(fileName: filePath)
             try workingText(text: text)
             try normalize()
             linearRegression()
             adjustmentCoefficient()
             print(k, b)
-            try writeFile(fileName: "rezult.csv", text: "k,b\n\(self.k),\(self.b)\n")
+            //try writeFile(fileName: "rezult.csv", text: "k,b\n\(self.k),\(self.b)\n")
         } catch let exception as Exception {
             systemError(massage: exception.massage)
         } catch {
@@ -70,8 +60,7 @@ class LinearRegression {
             let miliageNorm = (miliage - minM) / deltaM
             normalizeDict[miliageNorm] = price
         }
-        //print(self.dict, normalizeDict)
-        self.dict = normalizeDict
+        self.dictNormalize = normalizeDict
     }
     
     // MARK: Вычисление квадратичной ошибки.
@@ -88,11 +77,11 @@ class LinearRegression {
     private func linearRegression() {
         var error = Double.infinity
         let lr = 0.01
-        let count = Double(dict.count)
+        let count = Double(dictNormalize.count)
         while true {
             var summK = Double(0)
             var summB = Double(0)
-            for (mileage, price) in dict {
+            for (mileage, price) in dictNormalize {
                 summB += (k * mileage + b - price)
                 summK += (k * mileage + b - price) * mileage
             }
@@ -155,25 +144,33 @@ class LinearRegression {
             }
             self.dict[mileageDouble] = priceDouble
         }
-        //print(self.maxMiliage, self.minMiliage, self.maxPrice, self.minPrice)
     }
     
     // MARK: Вывод сообщения об ошибке в поток ошибок
     private func systemError(massage: String) {
         fputs(massage + "\n", stderr)
-        exit(-1)
+        //exit(-1)
     }
     
     // MARK: Чтение данных из файла.
     private func readFile(fileName: String) throws -> String {
-        let manager = FileManager.default
+        //let manager = FileManager.default
         //print(manager.currentDirectoryPath)
         //print(fileName)
-        let currentDirURL = URL(fileURLWithPath: manager.currentDirectoryPath)
+        //let currentDirURL = URL(fileURLWithPath: manager.currentDirectoryPath)
         //let currentDirURL = URL(fileURLWithPath: fileName)
-        let fileURL = currentDirURL.appendingPathComponent(fileName)
-        return try String(contentsOf: fileURL)
-        //return try String(contentsOf: currentDirURL)
+        let currentDirURL = URL(fileURLWithPath: fileName)
+        //let fileURL = currentDirURL.appendingPathComponent(fileName)
+        //return try String(contentsOf: fileURL)
+        print(currentDirURL)
+        print(currentDirURL.absoluteString)
+        print(currentDirURL.isFileURL)
+        let path = Bundle.main.path(forResource: "data", ofType: "csv") // file path for file "data.txt"
+        let string = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
+        print(string)
+        print(path!)
+        //return try String(contentsOf: currentDirURL.absoluteURL, encoding: .utf8)
+        return try String(contentsOfFile: fileName, encoding: .utf8)
     }
     
     // MARK: Запись в файл.

@@ -7,51 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29464ADB262063A0004FACC4 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29464ACA262060FC004FACC4 /* Forecast.swift */; };
-		29464ADE262063CF004FACC4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29464AD226206372004FACC4 /* main.swift */; };
-		2967653B261DA36C002EBF5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967653A261DA36C002EBF5B /* main.swift */; };
-		29676543261DA414002EBF5B /* LinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29676542261DA414002EBF5B /* LinearRegression.swift */; };
+		29464AF12620A516004FACC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29464AF02620A516004FACC4 /* AppDelegate.swift */; };
+		29464AF32620A516004FACC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29464AF22620A516004FACC4 /* ViewController.swift */; };
+		29464AF52620A51A004FACC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29464AF42620A51A004FACC4 /* Assets.xcassets */; };
+		29464AF82620A51B004FACC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29464AF62620A51B004FACC4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		29464ACE26206372004FACC4 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-		29676535261DA36C002EBF5B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		29464ACA262060FC004FACC4 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
-		29464AD026206372004FACC4 /* Forecast */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Forecast; sourceTree = BUILT_PRODUCTS_DIR; };
-		29464AD226206372004FACC4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		29676537261DA36C002EBF5B /* LinearRegression */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinearRegression; sourceTree = BUILT_PRODUCTS_DIR; };
-		2967653A261DA36C002EBF5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		29676542261DA414002EBF5B /* LinearRegression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearRegression.swift; sourceTree = "<group>"; };
+		29464AED2620A516004FACC4 /* UILinearRegression.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UILinearRegression.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29464AF02620A516004FACC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29464AF22620A516004FACC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29464AF42620A51A004FACC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29464AF72620A51B004FACC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29464AF92620A51B004FACC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29464AFA2620A51B004FACC4 /* UILinearRegression.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UILinearRegression.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		29464ACD26206372004FACC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29676534261DA36C002EBF5B /* Frameworks */ = {
+		29464AEA2620A516004FACC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,97 +34,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29464AD126206372004FACC4 /* Forecast */ = {
+		29464AE42620A516004FACC4 = {
 			isa = PBXGroup;
 			children = (
-				29464ACA262060FC004FACC4 /* Forecast.swift */,
-				29464AD226206372004FACC4 /* main.swift */,
-			);
-			path = Forecast;
-			sourceTree = "<group>";
-		};
-		2967652E261DA36C002EBF5B = {
-			isa = PBXGroup;
-			children = (
-				29676539261DA36C002EBF5B /* LinearRegression */,
-				29464AD126206372004FACC4 /* Forecast */,
-				29676538261DA36C002EBF5B /* Products */,
+				29464AEF2620A516004FACC4 /* UILinearRegression */,
+				29464AEE2620A516004FACC4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		29676538261DA36C002EBF5B /* Products */ = {
+		29464AEE2620A516004FACC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				29676537261DA36C002EBF5B /* LinearRegression */,
-				29464AD026206372004FACC4 /* Forecast */,
+				29464AED2620A516004FACC4 /* UILinearRegression.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29676539261DA36C002EBF5B /* LinearRegression */ = {
+		29464AEF2620A516004FACC4 /* UILinearRegression */ = {
 			isa = PBXGroup;
 			children = (
-				2967653A261DA36C002EBF5B /* main.swift */,
-				29676542261DA414002EBF5B /* LinearRegression.swift */,
+				29464AF02620A516004FACC4 /* AppDelegate.swift */,
+				29464AF22620A516004FACC4 /* ViewController.swift */,
+				29464AF42620A51A004FACC4 /* Assets.xcassets */,
+				29464AF62620A51B004FACC4 /* Main.storyboard */,
+				29464AF92620A51B004FACC4 /* Info.plist */,
+				29464AFA2620A51B004FACC4 /* UILinearRegression.entitlements */,
 			);
-			path = LinearRegression;
+			path = UILinearRegression;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		29464ACF26206372004FACC4 /* Forecast */ = {
+		29464AEC2620A516004FACC4 /* UILinearRegression */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29464AD426206372004FACC4 /* Build configuration list for PBXNativeTarget "Forecast" */;
+			buildConfigurationList = 29464AFD2620A51B004FACC4 /* Build configuration list for PBXNativeTarget "UILinearRegression" */;
 			buildPhases = (
-				29464ACC26206372004FACC4 /* Sources */,
-				29464ACD26206372004FACC4 /* Frameworks */,
-				29464ACE26206372004FACC4 /* CopyFiles */,
+				29464AE92620A516004FACC4 /* Sources */,
+				29464AEA2620A516004FACC4 /* Frameworks */,
+				29464AEB2620A516004FACC4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Forecast;
-			productName = Forecast;
-			productReference = 29464AD026206372004FACC4 /* Forecast */;
-			productType = "com.apple.product-type.tool";
-		};
-		29676536261DA36C002EBF5B /* LinearRegression */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2967653E261DA36C002EBF5B /* Build configuration list for PBXNativeTarget "LinearRegression" */;
-			buildPhases = (
-				29676533261DA36C002EBF5B /* Sources */,
-				29676534261DA36C002EBF5B /* Frameworks */,
-				29676535261DA36C002EBF5B /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LinearRegression;
-			productName = LinearRegression;
-			productReference = 29676537261DA36C002EBF5B /* LinearRegression */;
-			productType = "com.apple.product-type.tool";
+			name = UILinearRegression;
+			productName = UILinearRegression;
+			productReference = 29464AED2620A516004FACC4 /* UILinearRegression.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2967652F261DA36C002EBF5B /* Project object */ = {
+		29464AE52620A516004FACC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					29464ACF26206372004FACC4 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					29676536261DA36C002EBF5B = {
+					29464AEC2620A516004FACC4 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 29676532261DA36C002EBF5B /* Build configuration list for PBXProject "LinearRegression" */;
+			buildConfigurationList = 29464AE82620A516004FACC4 /* Build configuration list for PBXProject "UILinearRegression" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,62 +105,53 @@
 				en,
 				Base,
 			);
-			mainGroup = 2967652E261DA36C002EBF5B;
-			productRefGroup = 29676538261DA36C002EBF5B /* Products */;
+			mainGroup = 29464AE42620A516004FACC4;
+			productRefGroup = 29464AEE2620A516004FACC4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29676536261DA36C002EBF5B /* LinearRegression */,
-				29464ACF26206372004FACC4 /* Forecast */,
+				29464AEC2620A516004FACC4 /* UILinearRegression */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		29464ACC26206372004FACC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		29464AEB2620A516004FACC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29464ADE262063CF004FACC4 /* main.swift in Sources */,
-				29464ADB262063A0004FACC4 /* Forecast.swift in Sources */,
+				29464AF52620A51A004FACC4 /* Assets.xcassets in Resources */,
+				29464AF82620A51B004FACC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29676533261DA36C002EBF5B /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29464AE92620A516004FACC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2967653B261DA36C002EBF5B /* main.swift in Sources */,
-				29676543261DA414002EBF5B /* LinearRegression.swift in Sources */,
+				29464AF32620A516004FACC4 /* ViewController.swift in Sources */,
+				29464AF12620A516004FACC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		29464AF62620A51B004FACC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29464AF72620A51B004FACC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		29464AD526206372004FACC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7SNPDG93FF;
-				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		29464AD626206372004FACC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7SNPDG93FF;
-				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		2967653C261DA36C002EBF5B /* Debug */ = {
+		29464AFB2620A51B004FACC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -275,7 +212,7 @@
 			};
 			name = Debug;
 		};
-		2967653D261DA36C002EBF5B /* Release */ = {
+		29464AFC2620A51B004FACC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -329,23 +266,43 @@
 			};
 			name = Release;
 		};
-		2967653F261DA36C002EBF5B /* Debug */ = {
+		29464AFE2620A51B004FACC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UILinearRegression/UILinearRegression.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7SNPDG93FF;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = UILinearRegression/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = widraugr.UILinearRegression;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		29676540261DA36C002EBF5B /* Release */ = {
+		29464AFF2620A51B004FACC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UILinearRegression/UILinearRegression.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7SNPDG93FF;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = UILinearRegression/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = widraugr.UILinearRegression;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -354,34 +311,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		29464AD426206372004FACC4 /* Build configuration list for PBXNativeTarget "Forecast" */ = {
+		29464AE82620A516004FACC4 /* Build configuration list for PBXProject "UILinearRegression" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29464AD526206372004FACC4 /* Debug */,
-				29464AD626206372004FACC4 /* Release */,
+				29464AFB2620A51B004FACC4 /* Debug */,
+				29464AFC2620A51B004FACC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29676532261DA36C002EBF5B /* Build configuration list for PBXProject "LinearRegression" */ = {
+		29464AFD2620A51B004FACC4 /* Build configuration list for PBXNativeTarget "UILinearRegression" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2967653C261DA36C002EBF5B /* Debug */,
-				2967653D261DA36C002EBF5B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2967653E261DA36C002EBF5B /* Build configuration list for PBXNativeTarget "LinearRegression" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2967653F261DA36C002EBF5B /* Debug */,
-				29676540261DA36C002EBF5B /* Release */,
+				29464AFE2620A51B004FACC4 /* Debug */,
+				29464AFF2620A51B004FACC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2967652F261DA36C002EBF5B /* Project object */;
+	rootObject = 29464AE52620A516004FACC4 /* Project object */;
 }
