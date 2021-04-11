@@ -4,8 +4,7 @@
 //
 //  Created by Михаил Фокин on 07.04.2021.
 //
-// /Users/mixfon/MyFiles/Swift/ft_linear_regression/UILinearRegression/UILinearRegression/data.csv
-// /Users/mixfon/Library/Developer/Xcode/DerivedData/UILinearRegression-amfgpooblvpofbbucykhqtstrtel/Build/Products/Debug/UILinearRegression.app/Contents/Resources/data.csv
+
 import Foundation
 
 struct Exception: Error {
@@ -25,13 +24,10 @@ class LinearRegression {
     
     init(text: String) {
         do {
-            //let text = try readFile(fileName: filePath)
             try workingText(text: text)
             try normalize()
             linearRegression()
             adjustmentCoefficient()
-            print(k, b)
-            //try writeFile(fileName: "rezult.csv", text: "k,b\n\(self.k),\(self.b)\n")
         } catch let exception as Exception {
             systemError(massage: exception.massage)
         } catch {
@@ -149,36 +145,6 @@ class LinearRegression {
     // MARK: Вывод сообщения об ошибке в поток ошибок
     private func systemError(massage: String) {
         fputs(massage + "\n", stderr)
-        //exit(-1)
-    }
-    
-    // MARK: Чтение данных из файла.
-    private func readFile(fileName: String) throws -> String {
-        //let manager = FileManager.default
-        //print(manager.currentDirectoryPath)
-        //print(fileName)
-        //let currentDirURL = URL(fileURLWithPath: manager.currentDirectoryPath)
-        //let currentDirURL = URL(fileURLWithPath: fileName)
-        let currentDirURL = URL(fileURLWithPath: fileName)
-        //let fileURL = currentDirURL.appendingPathComponent(fileName)
-        //return try String(contentsOf: fileURL)
-        print(currentDirURL)
-        print(currentDirURL.absoluteString)
-        print(currentDirURL.isFileURL)
-        let path = Bundle.main.path(forResource: "data", ofType: "csv") // file path for file "data.txt"
-        let string = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-        print(string)
-        print(path!)
-        //return try String(contentsOf: currentDirURL.absoluteURL, encoding: .utf8)
-        return try String(contentsOfFile: fileName, encoding: .utf8)
-    }
-    
-    // MARK: Запись в файл.
-    private func writeFile(fileName: String, text: String) throws {
-        let manager = FileManager.default
-        let currentDirURL = URL(fileURLWithPath: manager.currentDirectoryPath)
-        let fileURL = currentDirURL.appendingPathComponent(fileName)
-        try text.write(to: fileURL, atomically: true, encoding: .utf8)
     }
 }
 

@@ -729,17 +729,17 @@
                                                 </connections>
                                             </button>
                                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6b-Nz-qSG">
-                                                <rect key="frame" x="0.0" y="100" width="240" height="377"/>
+                                                <rect key="frame" x="0.0" y="87" width="240" height="390"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="gGB-tk-D9I">
-                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="377"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="390"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="rLx-Ko-e5M">
-                                                            <rect key="frame" x="0.0" y="0.0" width="225" height="377"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="390"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="225" height="377"/>
+                                                            <size key="minSize" width="240" height="390"/>
                                                             <size key="maxSize" width="240" height="10000000"/>
                                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         </textView>
@@ -751,43 +751,62 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="lJg-9y-e22">
-                                                    <rect key="frame" x="225" y="0.0" width="15" height="377"/>
+                                                    <rect key="frame" x="224" y="0.0" width="16" height="390"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Om-3u-1DE">
-                                                <rect key="frame" x="43" y="53" width="154" height="32"/>
+                                                <rect key="frame" x="43" y="52" width="154" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Forecast" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4oy-u3-qmD">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="forecastButton:" target="XfG-lQ-9wD" id="EOe-Fb-W1Y"/>
+                                                </connections>
                                             </button>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bT1-Aj-osb">
-                                                <rect key="frame" x="5" y="31" width="230" height="21"/>
+                                                <rect key="frame" x="5" y="30" width="230" height="21"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="D4n-T8-SOz">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
+                                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H8D-en-enM">
+                                                <rect key="frame" x="66" y="-1" width="108" height="24"/>
+                                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="fk6-2b-JlE">
+                                                    <font key="font" metaFont="system"/>
+                                                    <segments>
+                                                        <segment width="32"/>
+                                                        <segment width="32" selected="YES" tag="1"/>
+                                                        <segment width="32">
+                                                            <nil key="label"/>
+                                                        </segment>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="selectionData:" target="XfG-lQ-9wD" id="n1L-li-sw6"/>
+                                                    </connections>
+                                                </segmentedCell>
+                                            </segmentedControl>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="bT1-Aj-osb" secondAttribute="bottom" constant="5" id="0vN-DJ-6RO"/>
                                             <constraint firstItem="7Om-3u-1DE" firstAttribute="leading" secondItem="AAx-qm-UyM" secondAttribute="leading" constant="50" id="2A5-br-EKi"/>
                                             <constraint firstAttribute="trailing" secondItem="bT1-Aj-osb" secondAttribute="trailing" constant="5" id="3PJ-b0-5j2"/>
                                             <constraint firstAttribute="trailing" secondItem="7Om-3u-1DE" secondAttribute="trailing" constant="50" id="7Hm-pB-Dps"/>
                                             <constraint firstAttribute="trailing" secondItem="ShH-Xj-OP7" secondAttribute="trailing" constant="50" id="NDB-zQ-R2f"/>
                                             <constraint firstItem="ShH-Xj-OP7" firstAttribute="leading" secondItem="AAx-qm-UyM" secondAttribute="leading" constant="50" id="PBS-h5-8GV"/>
                                             <constraint firstItem="bT1-Aj-osb" firstAttribute="leading" secondItem="AAx-qm-UyM" secondAttribute="leading" constant="5" id="QaL-7O-zuE"/>
-                                            <constraint firstItem="7Om-3u-1DE" firstAttribute="top" secondItem="w6b-Nz-qSG" secondAttribute="bottom" constant="20" id="krG-ii-eKa"/>
                                         </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
@@ -819,7 +838,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="forecastData" destination="bT1-Aj-osb" id="jKN-xl-jg8"/>
                         <outlet property="lineChartView" destination="VxE-VL-3WH" id="xPx-oN-4QW"/>
+                        <outlet property="selectData" destination="H8D-en-enM" id="6NS-4b-jwH"/>
                         <outlet property="text" destination="w6b-Nz-qSG" id="DJY-Pj-mkH"/>
                     </connections>
                 </viewController>
