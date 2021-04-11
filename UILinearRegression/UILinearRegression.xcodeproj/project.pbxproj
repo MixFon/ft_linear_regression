@@ -3,17 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29428E462621F50400168F34 /* the_cost_of_bread.csv in Resources */ = {isa = PBXBuildFile; fileRef = 29428E452621F50400168F34 /* the_cost_of_bread.csv */; };
 		29464AF12620A516004FACC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29464AF02620A516004FACC4 /* AppDelegate.swift */; };
 		29464AF32620A516004FACC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29464AF22620A516004FACC4 /* ViewController.swift */; };
 		29464AF52620A51A004FACC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29464AF42620A51A004FACC4 /* Assets.xcassets */; };
 		29464AF82620A51B004FACC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29464AF62620A51B004FACC4 /* Main.storyboard */; };
+		29464B0E2620A749004FACC4 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 29464B0D2620A749004FACC4 /* Charts */; };
+		29464B192620AD05004FACC4 /* LineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29464B182620AD05004FACC4 /* LineVC.swift */; };
+		29464B1C2620B6CE004FACC4 /* LinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29464B1B2620B6CE004FACC4 /* LinearRegression.swift */; };
+		29464B1F2620C314004FACC4 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 29464B1E2620C314004FACC4 /* data.csv */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		29464B062620A54F004FACC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29464B012620A54F004FACC4 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		29428E452621F50400168F34 /* the_cost_of_bread.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = the_cost_of_bread.csv; sourceTree = "<group>"; };
 		29464AED2620A516004FACC4 /* UILinearRegression.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UILinearRegression.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29464AF02620A516004FACC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29464AF22620A516004FACC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +37,11 @@
 		29464AF72620A51B004FACC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29464AF92620A51B004FACC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29464AFA2620A51B004FACC4 /* UILinearRegression.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UILinearRegression.entitlements; sourceTree = "<group>"; };
+		29464B012620A54F004FACC4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../../../../Temp/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		29464B0B2620A6D2004FACC4 /* Charts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Charts; path = ../../../../Temp/Charts; sourceTree = "<group>"; };
+		29464B182620AD05004FACC4 /* LineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineVC.swift; sourceTree = "<group>"; };
+		29464B1B2620B6CE004FACC4 /* LinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegression.swift; sourceTree = "<group>"; };
+		29464B1E2620C314004FACC4 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29464B0E2620A749004FACC4 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,7 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				29464AEF2620A516004FACC4 /* UILinearRegression */,
+				29464B012620A54F004FACC4 /* Charts.xcodeproj */,
 				29464AEE2620A516004FACC4 /* Products */,
+				29464B0A2620A635004FACC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +77,34 @@
 		29464AEF2620A516004FACC4 /* UILinearRegression */ = {
 			isa = PBXGroup;
 			children = (
+				29464B1E2620C314004FACC4 /* data.csv */,
+				29428E452621F50400168F34 /* the_cost_of_bread.csv */,
+				29464B1B2620B6CE004FACC4 /* LinearRegression.swift */,
 				29464AF02620A516004FACC4 /* AppDelegate.swift */,
 				29464AF22620A516004FACC4 /* ViewController.swift */,
 				29464AF42620A51A004FACC4 /* Assets.xcassets */,
 				29464AF62620A51B004FACC4 /* Main.storyboard */,
 				29464AF92620A51B004FACC4 /* Info.plist */,
 				29464AFA2620A51B004FACC4 /* UILinearRegression.entitlements */,
+				29464B182620AD05004FACC4 /* LineVC.swift */,
 			);
 			path = UILinearRegression;
+			sourceTree = "<group>";
+		};
+		29464B022620A54F004FACC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29464B072620A54F004FACC4 /* Charts.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29464B0A2620A635004FACC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29464B0B2620A6D2004FACC4 /* Charts */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +123,9 @@
 			dependencies = (
 			);
 			name = UILinearRegression;
+			packageProductDependencies = (
+				29464B0D2620A749004FACC4 /* Charts */,
+			);
 			productName = UILinearRegression;
 			productReference = 29464AED2620A516004FACC4 /* UILinearRegression.app */;
 			productType = "com.apple.product-type.application";
@@ -108,12 +155,28 @@
 			mainGroup = 29464AE42620A516004FACC4;
 			productRefGroup = 29464AEE2620A516004FACC4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 29464B022620A54F004FACC4 /* Products */;
+					ProjectRef = 29464B012620A54F004FACC4 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				29464AEC2620A516004FACC4 /* UILinearRegression */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		29464B072620A54F004FACC4 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 29464B062620A54F004FACC4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		29464AEB2620A516004FACC4 /* Resources */ = {
@@ -122,6 +185,8 @@
 			files = (
 				29464AF52620A51A004FACC4 /* Assets.xcassets in Resources */,
 				29464AF82620A51B004FACC4 /* Main.storyboard in Resources */,
+				29464B1F2620C314004FACC4 /* data.csv in Resources */,
+				29428E462621F50400168F34 /* the_cost_of_bread.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				29464AF32620A516004FACC4 /* ViewController.swift in Sources */,
+				29464B1C2620B6CE004FACC4 /* LinearRegression.swift in Sources */,
 				29464AF12620A516004FACC4 /* AppDelegate.swift in Sources */,
+				29464B192620AD05004FACC4 /* LineVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +397,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29464B0D2620A749004FACC4 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 29464AE52620A516004FACC4 /* Project object */;
 }

@@ -706,20 +706,20 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="LineVC" customModule="UILinearRegression" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="740" height="420"/>
+                        <rect key="frame" x="0.0" y="0.0" width="740" height="520"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fillProportionally" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-zJ-Q8Q">
-                                <rect key="frame" x="5" y="5" width="730" height="410"/>
+                                <rect key="frame" x="5" y="5" width="730" height="510"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="VxE-VL-3WH" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="5" width="482" height="405"/>
+                                        <rect key="frame" x="0.0" y="5" width="482" height="505"/>
                                     </customView>
                                     <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="405" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AAx-qm-UyM">
-                                        <rect key="frame" x="490" y="5" width="240" height="405"/>
+                                        <rect key="frame" x="490" y="5" width="240" height="505"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" placeholderIntrinsicWidth="140" placeholderIntrinsicHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-Xj-OP7">
-                                                <rect key="frame" x="43" y="378" width="154" height="32"/>
+                                                <rect key="frame" x="43" y="478" width="154" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Read" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jQf-GV-Czq">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -729,17 +729,17 @@
                                                 </connections>
                                             </button>
                                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6b-Nz-qSG">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="377"/>
+                                                <rect key="frame" x="0.0" y="100" width="240" height="377"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="gGB-tk-D9I">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="377"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="377"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="rLx-Ko-e5M">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="377"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="225" height="377"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="240" height="377"/>
+                                                            <size key="minSize" width="225" height="377"/>
                                                             <size key="maxSize" width="240" height="10000000"/>
                                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         </textView>
@@ -751,20 +751,45 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="lJg-9y-e22">
-                                                    <rect key="frame" x="224" y="0.0" width="16" height="377"/>
+                                                    <rect key="frame" x="225" y="0.0" width="15" height="377"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Om-3u-1DE">
+                                                <rect key="frame" x="43" y="53" width="154" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Forecast" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4oy-u3-qmD">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bT1-Aj-osb">
+                                                <rect key="frame" x="5" y="31" width="230" height="21"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="D4n-T8-SOz">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="bT1-Aj-osb" secondAttribute="bottom" constant="5" id="0vN-DJ-6RO"/>
+                                            <constraint firstItem="7Om-3u-1DE" firstAttribute="leading" secondItem="AAx-qm-UyM" secondAttribute="leading" constant="50" id="2A5-br-EKi"/>
+                                            <constraint firstAttribute="trailing" secondItem="bT1-Aj-osb" secondAttribute="trailing" constant="5" id="3PJ-b0-5j2"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Om-3u-1DE" secondAttribute="trailing" constant="50" id="7Hm-pB-Dps"/>
                                             <constraint firstAttribute="trailing" secondItem="ShH-Xj-OP7" secondAttribute="trailing" constant="50" id="NDB-zQ-R2f"/>
                                             <constraint firstItem="ShH-Xj-OP7" firstAttribute="leading" secondItem="AAx-qm-UyM" secondAttribute="leading" constant="50" id="PBS-h5-8GV"/>
+                                            <constraint firstItem="bT1-Aj-osb" firstAttribute="leading" secondItem="AAx-qm-UyM" secondAttribute="leading" constant="5" id="QaL-7O-zuE"/>
+                                            <constraint firstItem="7Om-3u-1DE" firstAttribute="top" secondItem="w6b-Nz-qSG" secondAttribute="bottom" constant="20" id="krG-ii-eKa"/>
                                         </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
@@ -794,12 +819,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lineChartView" destination="VxE-VL-3WH" id="xPx-oN-4QW"/>
                         <outlet property="text" destination="w6b-Nz-qSG" id="DJY-Pj-mkH"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="872"/>
+            <point key="canvasLocation" x="75" y="886"/>
         </scene>
     </scenes>
 </document>

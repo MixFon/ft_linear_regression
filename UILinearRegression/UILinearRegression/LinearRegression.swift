@@ -23,9 +23,9 @@ class LinearRegression {
     var k = Double(0)
     var b = Double(0)
     
-    init(filePath: String) {
+    init(text: String) {
         do {
-            let text = try readFile(fileName: filePath)
+            //let text = try readFile(fileName: filePath)
             try workingText(text: text)
             try normalize()
             linearRegression()
@@ -87,7 +87,7 @@ class LinearRegression {
             }
             k = k - lr * summK / count
             b = b - lr * summB / count
-            let temp = quadraticError(k: k, b: b, dict: dict)
+            let temp = quadraticError(k: k, b: b, dict: dictNormalize)
             if temp > error {
                 return
             } else {
