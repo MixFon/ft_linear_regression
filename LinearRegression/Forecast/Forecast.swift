@@ -92,12 +92,8 @@ class Forecast {
     // MARK: Чтение данных из файла.
     private func readFile(fileName: String) throws -> String {
         let manager = FileManager.default
-        //print(manager.currentDirectoryPath)
-        //print(fileName)
         let currentDirURL = URL(fileURLWithPath: manager.currentDirectoryPath)
-        //let currentDirURL = URL(fileURLWithPath: fileName)
         let fileURL = currentDirURL.appendingPathComponent(fileName)
         return try String(contentsOf: fileURL)
-        //return try String(contentsOf: currentDirURL)
     }
 }

@@ -70,7 +70,6 @@ class LinearRegression {
             let miliageNorm = (miliage - minM) / deltaM
             normalizeDict[miliageNorm] = price
         }
-        //print(self.dict, normalizeDict)
         self.dict = normalizeDict
     }
     
@@ -155,7 +154,6 @@ class LinearRegression {
             }
             self.dict[mileageDouble] = priceDouble
         }
-        //print(self.maxMiliage, self.minMiliage, self.maxPrice, self.minPrice)
     }
     
     // MARK: Вывод сообщения об ошибке в поток ошибок
@@ -167,13 +165,9 @@ class LinearRegression {
     // MARK: Чтение данных из файла.
     private func readFile(fileName: String) throws -> String {
         let manager = FileManager.default
-        //print(manager.currentDirectoryPath)
-        //print(fileName)
         let currentDirURL = URL(fileURLWithPath: manager.currentDirectoryPath)
-        //let currentDirURL = URL(fileURLWithPath: fileName)
         let fileURL = currentDirURL.appendingPathComponent(fileName)
         return try String(contentsOf: fileURL)
-        //return try String(contentsOf: currentDirURL)
     }
     
     // MARK: Запись в файл.
