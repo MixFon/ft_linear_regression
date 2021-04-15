@@ -50,3 +50,22 @@
     > k = -0.019402453931589177
     > b = 8008.438885070447
     > 6572.657294132849
+
+
+## Визуальный режим
+
+Визуальный режим находится ветке UILinearRegression.
+
+В визуальном режиме совмещены две программы в одну. В окно ввода текста вводнится информация для обучения. После нажатия на кнопку Read информация считывается и обрабатывается.
+
+### Использование
+
+Для запуска визуального режима необходим XCode.
+
+    git clone https://github.com/MixFon/ft_linear_regression.git
+    cd ft_linear_regression
+    git checkout UILinearRegression
+    cd UILinearRegression
+    open UILinearRegression.xcodeproj
+
+![gif](https://github.com/MixFon/ft_linear_regression/blob/master/images/Screen_Recording.gif)
