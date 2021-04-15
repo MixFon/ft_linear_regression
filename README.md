@@ -3,9 +3,6 @@
 
 В репозитории передставлены две версии программы - консольная и оконная. 
 
-## Консольная версия
-Консольная версия представлена в виде двух программ. Программы по обучении (ft_linear_regression) и программы по выводу значения (forecast). Программа ft_linear_regression считывае данные из файла, имя которого передается вторым агрументом при запуске. На основе данных вычисляет коэффициенты k и b прямой линии, минимально отдаленной от всех точек. Коэффициенты k и b сохраняются в файл "rezult.csv". Программа forecast считывает коэффициенты k и b из файла "rezult.csv" и выводит значение линейной функции на основе числа переданного в качестве второго аргумента.
-
 Нахождение коэффициентов k и b выпоняется на основе среднеквадратичной функции потерь (MSE среднеквадратичная ошибка).
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{(Y_{i}&space;-&space;y_{i})^2}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MSE&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{(Y_{i}&space;-&space;y_{i})^2}{n}" title="MSE = \sum_{i = 0}^{n}\frac{(Y_{i} - y_{i})^2}{n}" /></a>
@@ -28,6 +25,14 @@
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\left\{\begin{matrix}&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})&space;}{n}&space;=&space;0&space;\\&space;\\\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})\cdot&space;x_i}{n}&space;=&space;0&space;\end{matrix}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\left\{\begin{matrix}&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})&space;}{n}&space;=&space;0&space;\\&space;\\\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})\cdot&space;x_i}{n}&space;=&space;0&space;\end{matrix}\right." title="\left\{\begin{matrix} \sum_{i = 0}^{n}\frac{2\cdot (k \cdot x_{i} + b - y_{i}) }{n} = 0 \\ \\\sum_{i = 0}^{n}\frac{2\cdot (k \cdot x_{i} + b - y_{i})\cdot x_i}{n} = 0 \end{matrix}\right." /></a>
 
+В проекте для нахождения коэффициентов k и b используются метод градиентного спуска. Подбирается шаг lr и "спускаемся" по функциям частных производных высчитывая на каждом шагу коэффициенты k и b. Делаем это до тех пор пока среднеквадратичная ошибка (MSE) на текущем шаге не будет больше чем на предыдущем.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=k_{new}&space;=&space;k&space;-&space;lr\cdot&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})\cdot&space;x_i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k_{new}&space;=&space;k&space;-&space;lr\cdot&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})\cdot&space;x_i}{n}" title="k_{new} = k - lr\cdot \sum_{i = 0}^{n}\frac{2\cdot (k \cdot x_{i} + b - y_{i})\cdot x_i}{n}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=b_{new}&space;=&space;b&space;-&space;lr\cdot&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b_{new}&space;=&space;b&space;-&space;lr\cdot&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})}{n}" title="b_{new} = b - lr\cdot \sum_{i = 0}^{n}\frac{2\cdot (k \cdot x_{i} + b - y_{i})}{n}" /></a>
+
+## Консольная версия
+Консольная версия представлена в виде двух программ. Программы по обучении (ft_linear_regression) и программы по выводу значения (forecast). Программа ft_linear_regression считывае данные из файла, имя которого передается вторым агрументом при запуске. На основе данных вычисляет коэффициенты k и b прямой линии, минимально отдаленной от всех точек. Коэффициенты k и b сохраняются в файл "rezult.csv". Программа forecast считывает коэффициенты k и b из файла "rezult.csv" и выводит значение линейной функции на основе числа переданного в качестве второго аргумента.
 
 ### Использование
 
