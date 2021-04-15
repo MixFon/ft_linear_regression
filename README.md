@@ -1,13 +1,15 @@
 # ft_linear_regression
 В этом проекте реализован мой первый алгоритм машинного обучения.
 
-В репозитории передставлены две версии программы - консольная и оконная. 
+В репозитории представлены две версии программы консольная и версия с графическим интерфейсом.
 
-Нахождение коэффициентов k и b выпоняется на основе среднеквадратичной функции потерь (MSE среднеквадратичная ошибка).
+В данном проекте представлена реализация линейной регрессии. Суть которой заключается в определении коэффициентов k и b для построения прямой, минимально удаленной от всех точек графика данных.
+
+Нахождение коэффициентов k и b выполняется на основе среднеквадратичной функции потерь (MSE среднеквадратичная ошибка).
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{(Y_{i}&space;-&space;y_{i})^2}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MSE&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{(Y_{i}&space;-&space;y_{i})^2}{n}" title="MSE = \sum_{i = 0}^{n}\frac{(Y_{i} - y_{i})^2}{n}" /></a>
 
-Где Yi это значение прямой, а yi это знаяение данных из файла.
+Где Yi это значение прямой, а yi это значение данных из файла.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Y&space;=&space;k&space;\cdot&space;x&space;&plus;&space;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y&space;=&space;k&space;\cdot&space;x&space;&plus;&space;b" title="Y = k \cdot x + b" /></a>
 
@@ -15,7 +17,7 @@
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f(k,&space;b)&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})^2}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(k,&space;b)&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})^2}{n}" title="f(k, b) = \sum_{i = 0}^{n}\frac{(k \cdot x_{i} + b - y_{i})^2}{n}" /></a>
 
-Далнее нужно найти минимальное значение подлучившейся функции, для этого нам нужно взять частные производные по k и по b.
+Далее нужно найти минимальное значение получившейся функции, для этого нам нужно взять частные производные по k и по b.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f'(k,&space;b)_k&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})\cdot&space;x_i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f'(k,&space;b)_k&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})\cdot&space;x_i}{n}" title="f'(k, b)_k = \sum_{i = 0}^{n}\frac{2\cdot (k \cdot x_{i} + b - y_{i})\cdot x_i}{n}" /></a>
 
@@ -32,7 +34,7 @@
 <a href="https://www.codecogs.com/eqnedit.php?latex=b_{new}&space;=&space;b&space;-&space;lr\cdot&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b_{new}&space;=&space;b&space;-&space;lr\cdot&space;\sum_{i&space;=&space;0}^{n}\frac{2\cdot&space;(k&space;\cdot&space;x_{i}&space;&plus;&space;b&space;-&space;y_{i})}{n}" title="b_{new} = b - lr\cdot \sum_{i = 0}^{n}\frac{2\cdot (k \cdot x_{i} + b - y_{i})}{n}" /></a>
 
 ## Консольная версия
-Консольная версия представлена в виде двух программ. Программы по обучении (ft_linear_regression) и программы по выводу значения (forecast). Программа ft_linear_regression считывае данные из файла, имя которого передается вторым агрументом при запуске. На основе данных вычисляет коэффициенты k и b прямой линии, минимально отдаленной от всех точек. Коэффициенты k и b сохраняются в файл "rezult.csv". Программа forecast считывает коэффициенты k и b из файла "rezult.csv" и выводит значение линейной функции на основе числа переданного в качестве второго аргумента.
+Консольная версия представлена в виде двух программ. Программы по обучении (ft_linear_regression) и программы по выводу значения (forecast). Программа ft_linear_regression считывает данные из файла, имя которого передается вторым аргументом при запуске. На основе данных вычисляет коэффициенты k и b прямой линии, минимально отдаленной от всех точек. Коэффициенты k и b сохраняются в файл "rezult.csv". Программа forecast считывает коэффициенты k и b из файла "rezult.csv" и выводит значение линейной функции на основе числа переданного в качестве второго аргумента.
 
 ### Использование
 
