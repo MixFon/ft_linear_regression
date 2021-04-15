@@ -41,3 +41,12 @@
     git clone https://github.com/MixFon/ft_linear_regression.git
     cd ft_linear_regression/LinearRegression/LinearRegression
     make
+    ./ft_linear_regression data.csv
+    > -0.019402453931589177 8008.438885070447
+    cat rezult.csv
+    > k,b
+    > -0.019402453931589177,8008.438885070447
+    ./forecast 74000
+    > k = -0.019402453931589177
+    > b = 8008.438885070447
+    > 6572.657294132849
