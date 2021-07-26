@@ -9,7 +9,7 @@
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{(Y_{i}&space;-&space;y_{i})^2}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MSE&space;=&space;\sum_{i&space;=&space;0}^{n}\frac{(Y_{i}&space;-&space;y_{i})^2}{n}" title="MSE = \sum_{i = 0}^{n}\frac{(Y_{i} - y_{i})^2}{n}" /></a>
 
-Где Yi это значение прямой, а yi это значение данных из файла.
+Где Yi это значение прямой, а yi это значение данных из файла. 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Y&space;=&space;k&space;\cdot&space;x&space;&plus;&space;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y&space;=&space;k&space;\cdot&space;x&space;&plus;&space;b" title="Y = k \cdot x + b" /></a>
 
